@@ -1,3 +1,4 @@
+learn --f-f
 Deli Counter - Take a Number
 
 ## Objectives

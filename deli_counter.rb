@@ -1,8 +1,16 @@
 def line(katz_deli)
+  i = 0
+  array = []
+  
+  sentence = "The line is currently:"
   if katz_deli.length == 0
-     puts "The line is currently empty."
-       else puts "The line is currently:"
-    katz_deli.each.with_index(1) {|person, index| puts " #{index}. #{person} "}
+       puts "The line is currently empty."
+  else  
+    katz_deli.each do |person| 
+      array << " #{i+1}. #{person}" 
+      i +=1
+      end
+      puts "#{sentence}#{array.join}"
   end
 end
 
@@ -13,5 +21,5 @@ def take_a_number(katz_deli, name)
 end
  
  def now_serving(katz_deli)
-     katz_deli.length == 0 ? puts "There is nobody waiting to be served!" : puts "Currently serving #{katz_deli.shift}"
+     katz_deli.length == 0 ?  (puts "There is nobody waiting to be served!") : (puts "Currently serving #{katz_deli.shift}.")
  end
