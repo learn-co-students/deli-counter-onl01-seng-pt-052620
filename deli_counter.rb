@@ -1,10 +1,8 @@
 def line(line_deli)
   if line_deli.size == 0
      puts "The line is currently empty."
-     else 
-       empty_line = line_deli.map.with_index(1) do |customer, number| 
-        "#{number}. #{customer}"
-       end
+  else 
+     empty_line = line_deli.map.with_index(1) {|customer, number| "#{number}. #{customer}"}
      puts "The line is currently: #{empty_line.join(' ')}"
   end
 end
@@ -17,7 +15,7 @@ end
 def now_serving(line_deli)
   if line_deli.empty?
     puts "There is nobody waiting to be served!"
-    else
+  else
     puts "Currently serving #{line_deli.shift}."
   end
 end
